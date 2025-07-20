@@ -1,0 +1,145 @@
+{
+    "name": "Anil Kumar",
+    "contact": {
+        "phone": "+91-9911272206",
+        "email": "anilritwal@yahoo.com",
+        "location": "Pune",
+        "linkedin": "https://linkedin.com/in/anil-kumar-732b8343"
+    },
+    "summary": "Experienced Software Developer specializing in scalable, reusable applications with C#, C++, Next.js, TypeScript, and ASP.NET. Proven expertise in integrating Prisma with MongoDB and optimizing performance for high-traffic applications. Adept at collaborating in international environments and delivering innovative solutions within Agile frameworks.",
+    "skills": {
+        "languages_frameworks": [
+            "C#",
+            "C++",
+            "TypeScript",
+            "JavaScript",
+            "ASP.NET",
+            "Next.js",
+            "Node.js",
+            "XAML",
+            "HTML",
+            "CSS"
+        ],
+        "database_cloud": [
+            "SQLite",
+            "SQL",
+            "Azure",
+            "Prisma",
+            "MongoDB"
+        ],
+        "practices_tools": [
+            "Git",
+            "TDD",
+            "MVC",
+            "MVVM",
+            "SOLID Principles",
+            "Agile",
+            "Design Patterns"
+        ],
+        "ui_desktop": [
+            "WinForms",
+            "WPF"
+        ]
+    },
+    "experience": [
+        {
+            "title": "Software Developer",
+            "company": "Dassault Systemes and Solutions Pvt. Ltd",
+            "location": "Pune",
+            "duration": "July 2023 – Present",
+            "responsibilities": [
+                "Delivering the functions for release",
+                "Led Agile sprint planning to improve team efficiency",
+                "Optimized data export feature, reducing processing time by 30%",
+                "Integrated C++ and JavaScript components for interoperability",
+                "Architected scalable solutions for modularity and maintainability"
+            ],
+            "image": "/logos/dassault.svg"
+        },
+        {
+            "title": "Associate Software Developer",
+            "company": "Prototech Solutions and Services Pvt. Ltd",
+            "location": "Pune",
+            "duration": "Dec 2021 – July 2023",
+            "responsibilities": [
+                "Developed desktop applications using WinForms and WPF",
+                "Created flowcharts, layouts, and documentation",
+                "Provided maintenance and enhancements in existing systems",
+                "TDD-driven development and ongoing support"
+            ],
+            "image": "/logos/prototech.svg"
+        }
+    ],
+    "education": [
+        {
+            "degree": "B. Tech",
+            "institution": "Ideal Institute of Technology"
+        },
+        {
+            "degree": "Diploma",
+            "institution": "PDM Polytechnic"
+        }
+    ],
+    "languages_known": {
+        "English": "Advanced",
+        "Hindi": "Native"
+    },
+    "projects": [
+        {
+            "title": "CAD Model Simulation Plugin",
+            "description": "Developed a plugin to simulate CAD models for engineering analysis.",
+            "tech": [
+                "C#",
+                "WinForms",
+                ".NET",
+                "XML"
+            ],
+            "image": "/images/projects/next.svg",
+            "github": "https://github.com/your-profile/cad-sim-plugin",
+            "demo": "https://your-demo-link.com"
+        },
+        {
+            "title": "Earth Resource Estimation App",
+            "description": "A native desktop app to estimate resource quantities using geospatial data.",
+            "tech": [
+                "C++",
+                "JavaScript",
+                "TypeScript"
+            ],
+            "image": "/images/projects/next.svg",
+            "github": "https://github.com/your-profile/earth-resource",
+            "demo": null
+        }
+    ],
+    "certifications": [
+        {
+            "title": "Scrum Master Certified",
+            "issuer": "Scrum Alliance",
+            "date": "2024-06-01",
+            "type": "Agile",
+            "link": "https://example.com/scrum-cert",
+            "badge": "scrum-alliance.svg"
+        },
+        {
+            "title": "Azure Fundamentals (AZ-900)",
+            "issuer": "Microsoft",
+            "date": "2023-11-15",
+            "type": "Cloud",
+            "link": "https://example.com/azure-cert",
+            "badge": "microsoft.svg"
+        },
+        {
+            "title": "Agile with Atlassian Jira",
+            "issuer": "Coursera",
+            "date": "2023-05-01",
+            "type": "Agile",
+            "link": "https://example.com/jira-cert",
+            "badge": "coursera.svg"
+        }
+    ],
+    "achievements": [
+        "Optimized performance by 4x",
+        "Best Employee of the Quarter",
+        "Built cross-platform simulation app improving workflow automation"
+    ]
+}
