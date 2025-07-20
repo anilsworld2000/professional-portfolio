@@ -28,6 +28,8 @@ export default function CertificationsCard({
           <Image
             src={`/badges/${badge}`}
             alt={`${title} badge`}
+            width={160}
+            height={160}
             className="h-16 w-16 object-contain"
           />
         ) : (
