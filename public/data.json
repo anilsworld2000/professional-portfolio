@@ -1,44 +1,178 @@
 {
-    "name": "Anil Kumar",
-    "contact": {
-        "phone": "+91-9911272206",
-        "email": "anilritwal@yahoo.com",
-        "location": "Pune",
-        "linkedin": "https://linkedin.com/in/anil-kumar-732b8343"
+    "homeSection": {
+        "id": "hero",
+        "title": "Home Section",
+        "subTitle": "Experienced Software Developer specializing in scalable, reusable applications.",
+        "content": {
+            "name": "Anil Kumar",
+            "contact": {
+                "phone": "+91-9911272206",
+                "email": "ritwalanil@gmail.com",
+                "location": "Pune, India"
+            },
+            "links": [
+                {
+                    "name": "LinkedIn",
+                    "link": "https://linkedin.com/in/anil-kumar-732b8343"
+                },
+                {
+                    "name": "GitHub",
+                    "link": "https://github.com/anilsworld2000"
+                }
+            ]
+        }
     },
-    "summary": "Experienced Software Developer specializing in scalable, reusable applications with C#, C++, Next.js, TypeScript, and ASP.NET. Proven expertise in integrating Prisma with MongoDB and optimizing performance for high-traffic applications. Adept at collaborating in international environments and delivering innovative solutions within Agile frameworks.",
+    "aboutMe": {
+        "id": "aboutMe",
+        "title": "About  Me",
+        "subTitle": "",
+        "content": "Experienced Software Developer specializing in scalable, reusable applications with C#, C++, Next.js, TypeScript, and ASP.NET. Proven expertise in integrating Prisma with MongoDB and optimizing performance for high-traffic applications. Adept at collaborating in international environments and delivering innovative solutions within Agile frameworks."
+    },
     "skills": {
-        "languages_frameworks": [
-            "C#",
-            "C++",
-            "TypeScript",
-            "JavaScript",
-            "ASP.NET",
-            "Next.js",
-            "Node.js",
-            "XAML",
-            "HTML",
-            "CSS"
-        ],
-        "database_cloud": [
-            "SQLite",
-            "SQL",
-            "Azure",
-            "Prisma",
-            "MongoDB"
-        ],
-        "practices_tools": [
-            "Git",
-            "TDD",
-            "MVC",
-            "MVVM",
-            "SOLID Principles",
-            "Agile",
-            "Design Patterns"
-        ],
-        "ui_desktop": [
-            "WinForms",
-            "WPF"
+        "id": "skills",
+        "title": "Tech Stack",
+        "subTitle": "Tools & Technologies I use",
+        "content": [
+            {
+                "name": "Programming Languages & Frameworks",
+                "items": [
+                    "C#",
+                    "C++",
+                    "TypeScript",
+                    "JavaScript",
+                    "ASP.NET",
+                    "Next.js",
+                    "Node.js",
+                    "XAML",
+                    "HTML",
+                    "CSS"
+                ]
+            },
+            {
+                "name": "Database & Cloud Technologies",
+                "items": [
+                    "SQLite",
+                    "SQL",
+                    "Azure",
+                    "Prisma",
+                    "MongoDB"
+                ]
+            },
+            {
+                "name": "Development Practices & Tools",
+                "items": [
+                    "Git",
+                    "TDD",
+                    "MVC",
+                    "MVVM",
+                    "SOLID Principles",
+                    "Agile",
+                    "Design Patterns"
+                ]
+            },
+            {
+                "name": "Desktop & UI Development",
+                "items": [
+                    "WinForms",
+                    "WPF"
+                ]
+            }
+        ]
+    },
+    "projects": {
+        "id": "projects",
+        "title": "Projects",
+        "subTitle": "Things I've Built",
+        "content": [
+            {
+                "title": "CAD Model Simulation Plugin",
+                "subTitle": "",
+                "description": "Developed a plugin to simulate CAD models for engineering analysis.",
+                "image": "/images/projects/CAD_PlugIn.svg",
+                "items": [
+                    "C#",
+                    "WinForms",
+                    ".NET",
+                    "XML"
+                ],
+                "links": [
+                    {
+                        "name": "GitHub",
+                        "link": ""
+                    },
+                    {
+                        "name": "Demo",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "title": "CAD Project Data Management Plugin",
+                "subTitle": "",
+                "description": "Developed a plugin to manage CAD models data.",
+                "image": "/images/projects/CAD_PlugIn.svg",
+                "items": [
+                    "C#",
+                    "WinForms",
+                    ".NET",
+                    "XML",
+                    "MVC"
+                ],
+                "links": [
+                    {
+                        "name": "GitHub",
+                        "link": ""
+                    },
+                    {
+                        "name": "Demo",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "title": "Personal Finance Portfolio Management App",
+                "subTitle": "",
+                "description": "",
+                "image": "/images/projects/personal-finance-app.svg",
+                "items": [
+                    "Next.js",
+                    "Node.js",
+                    "TypeScript",
+                    "PostgreSQL",
+                    "Prisma"
+                ],
+                "links": [
+                    {
+                        "name": "GitHub",
+                        "link": ""
+                    },
+                    {
+                        "name": "Demo",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "title": "Earth Resource Estimation App",
+                "subTitle": "",
+                "description": "A native desktop app to estimate resource quantities using geospatial data.",
+                "image": "/images/projects/next.svg",
+                "items": [
+                    "C++",
+                    "JavaScript",
+                    "TypeScript"
+                ],
+                "links": [
+                    {
+                        "name": "GitHub",
+                        "link": ""
+                    },
+                    {
+                        "name": "Demo",
+                        "link": ""
+                    }
+                ]
+            }
         ]
     },
     "experience": [
@@ -84,33 +218,6 @@
         "English": "Advanced",
         "Hindi": "Native"
     },
-    "projects": [
-        {
-            "title": "CAD Model Simulation Plugin",
-            "description": "Developed a plugin to simulate CAD models for engineering analysis.",
-            "tech": [
-                "C#",
-                "WinForms",
-                ".NET",
-                "XML"
-            ],
-            "image": "/images/projects/next.svg",
-            "github": "https://github.com/your-profile/cad-sim-plugin",
-            "demo": "https://your-demo-link.com"
-        },
-        {
-            "title": "Earth Resource Estimation App",
-            "description": "A native desktop app to estimate resource quantities using geospatial data.",
-            "tech": [
-                "C++",
-                "JavaScript",
-                "TypeScript"
-            ],
-            "image": "/images/projects/next.svg",
-            "github": "https://github.com/your-profile/earth-resource",
-            "demo": null
-        }
-    ],
     "certifications": [
         {
             "title": "Scrum Master Certified",

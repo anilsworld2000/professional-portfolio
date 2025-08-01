@@ -5,7 +5,7 @@ import data from '@/public/data.json'
 import SectionWrapper from '@/app/components/common/SectionWrapper'
 import Heading from '@/app/components/common/Heading'
 import CertificateCard from '@/app/components/common/CertificationsCard'
-import Button from '@/app/components/ui/Button'
+import Button from '@/app/components/ui/BaseComponents/BaseButton'
 
 type Certification = {
   title: string
@@ -40,8 +40,7 @@ export default function Certifications() {
         <Button
           onClick={() => setFilter('All')}
           aria-pressed={filter === 'All'}
-          className={filter === 'All' ? '' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}
-        >
+          className={filter === 'All' ? '' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'} variant={'primary'} size={'sm'}>
           All
         </Button>
 
@@ -50,8 +49,7 @@ export default function Certifications() {
             key={type}
             onClick={() => setFilter(type)}
             aria-pressed={filter === type}
-            className={filter === type ? '' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}
-          >
+            className={filter === type ? '' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'} variant={'primary'} size={'sm'}>
             {type}
           </Button>
         ))}

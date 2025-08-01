@@ -1,0 +1,20 @@
+<svg width="200" height="200" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer border -->
+  <rect x="1" y="1" width="62" height="62" rx="6" fill="white" stroke="black" stroke-width="0"/>
+
+  <!-- 3D Cube Faces (No overlapping strokes) -->
+  <!-- Top face -->
+  <polygon points="32,16 48,24 32,32 16,24" fill="#E0E0E0"/>
+
+  <!-- Left face -->
+  <polygon points="16,24 16,40 32,48 32,32" fill="#CCCCCC"/>
+
+  <!-- Right face -->
+  <polygon points="48,24 48,40 32,48 32,32" fill="#B0B0B0"/>
+
+  <!-- Edges -->
+  <polyline points="32,16 48,24 48,40 32,48 16,40 16,24 32,16" fill="none" stroke="black" stroke-width="0.5"/>
+  <line x1="16" y1="24" x2="32" y2="32" stroke="black" stroke-width="0.5"/>
+  <line x1="48" y1="24" x2="32" y2="32" stroke="black" stroke-width="0.5"/>
+  <line x1="32" y1="48" x2="32" y2="32" stroke="black" stroke-width="0.5"/>
+</svg>

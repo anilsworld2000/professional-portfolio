@@ -4,40 +4,52 @@ import data from '@/public/data.json'
 import SectionWrapper from '../common/SectionWrapper'
 import Heading from '../common/Heading'
 import ProjectCard from '../common/ProjectCard'
+import TagFilter from '../common/TagFilter'
+import GetIcon from '../ui/Icons'
+import { IconRecord } from '../ui/BaseComponents/BaseCard'
 
 export default function Projects() {
+  const projectsData = data.projects;
   const [activeTag, setActiveTag] = useState<string | null>(null)
 
-  const allTags = [...new Set(data.projects.flatMap(p => p.tech))]
+  const allTags = [...new Set(projectsData.content.flatMap(p => p.items))]
 
   const filteredProjects = activeTag
-    ? data.projects.filter(p => p.tech.includes(activeTag))
-    : data.projects
+    ? projectsData.content.filter(p => p.items.includes(activeTag))
+    : projectsData.content;
+  
+  const iconMap: IconRecord = {};
+  projectsData.content.forEach(element => {
+    element.links.forEach(item => {
+      let icon = GetIcon(item.name);
+      if (icon === null) {
+        icon = GetIcon('ExternalLink');
+      }
+      if(icon != null)
+        iconMap[item.name] = icon;
+    });
+  });
+
+  function getCardImage(path: string) {
+    return { path: path, width: 'w-full', height: 'h-50' }
+  }
 
   return (
-    <SectionWrapper id="projects">
-      <Heading title="Projects" subtitle="Things I've Built" />
+    <SectionWrapper id={projectsData.id}>
+      <Heading title={projectsData.title} subtitle={projectsData.subTitle} />
 
-      {/* Filters */}
-      <div className="flex flex-wrap gap-2 mb-8">
-        <button onClick={() => setActiveTag(null)} className={`px-3 py-1 rounded-full ${!activeTag ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-800'}`}>
-          All
-        </button>
-        {allTags.map(tag => (
-          <button
-            key={tag}
-            onClick={() => setActiveTag(tag)}
-            className={`px-3 py-1 rounded-full ${activeTag === tag ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-800'}`}
-          >
-            {tag}
-          </button>
-        ))}
-      </div>
+      {/* Tag filter */}
+      <TagFilter tags={allTags} activeTag={activeTag} setActiveTag={setActiveTag}></TagFilter>
 
-      {/* Cards */}
-      <div className="grid md:grid-cols-2 gap-6">
+      {/* Projects Card */}
+      <div className='grid md:grid-cols-4 gap-6'>
         {filteredProjects.map(project => (
-          <ProjectCard key={project.title} {...project} />
+          <ProjectCard key={project.title}
+            {...project}
+            linkIcons={iconMap}
+            badges={project.items}
+            image={getCardImage(project.image)}
+          ></ProjectCard>
         ))}
       </div>
     </SectionWrapper>
