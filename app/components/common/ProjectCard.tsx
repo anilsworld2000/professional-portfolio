@@ -1,7 +1,22 @@
-import BaseCard, { BaseCardProps } from '@/app/components/ui/BaseComponents/BaseCard'
+// src/components/ProjectCard.tsx
+import BaseCard from '@/app/components/ui/Atoms/BaseCard';
 
-export interface ProjectCardProps extends BaseCardProps {
+export interface ProjectCardProps {
+  title: string
+  subtitle?: string
+  date?: string
+  image?: {
+    path: string
+    alt?: string
+  }
   description?: string
+  badges?: string[]
+  tags?: string[]
+  links?: {
+    name: string
+    href: string
+    icon?: React.ReactNode
+  }[]
 }
 
 export default function ProjectCard({
@@ -12,21 +27,30 @@ export default function ProjectCard({
   badges = [],
   tags = [],
   links = [],
-  linkIcons,
   description,
 }: ProjectCardProps) {
   return (
-    <BaseCard
-      title={title}
-      subtitle={subtitle}
-      date={date}
-      image={image}
-      badges={badges}
-      tags={tags}
-      links={links}
-      linkIcons={linkIcons}
-    >
-      {description && <p className="text-sm mt-2">{description}</p>}
+    <BaseCard as="article" variant="light" className="w-full max-w-2xl sm:max-w-md md:max-w-lg">
+      {/* Always visible */}
+      <BaseCard.Header title={title} subtitle={subtitle} />
+
+      {image?.path && (
+        <BaseCard.Media
+          src={image.path}
+          alt={`${title} screenshot`}
+          fill
+          objectFit="cover"
+        />
+      )}
+
+      {/* Now use context safely INSIDE the card render tree */}
+      <BaseCard.Content
+        date={date}
+        description={description}
+        badges={badges}
+        tags={tags}
+        links={links}
+      />
     </BaseCard>
-  )
+  );
 }

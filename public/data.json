@@ -1,4 +1,38 @@
 {
+    "topNavBar": {
+        "leftSide": {
+            "links": [
+                {
+                    "name": "Avtra",
+                    "link": "/"
+                },
+                {
+                    "name": "Anil Kumar",
+                    "link": "/"
+                }
+            ]
+        },
+        "rightSide": {
+            "links": [
+                {
+                    "name": "Home",
+                    "link": "/"
+                },
+                {
+                    "name": "About",
+                    "link": "#about"
+                },
+                {
+                    "name": "Projects",
+                    "link": "#projects"
+                },
+                {
+                    "name": "Contact",
+                    "link": "#contact"
+                }
+            ]
+        }
+    },
     "homeSection": {
         "id": "hero",
         "title": "Home Section",

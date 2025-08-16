@@ -2,12 +2,34 @@
 
 import { motion } from 'framer-motion'
 import SectionWrapper from '../common/SectionWrapper'
-import Button from '../ui/Buttons'
 import data from '@/public/data.json'
-import GetIcon from '../ui/Icons'
+import { GetIcon } from '../ui/Atoms/Icon'
+import IconLinkList from '../ui/molecules/IconLinkList'
+import Button from '../ui/Buttons'
 
 export default function Hero() {
   const homeSection = data.homeSection;
+
+  function getIcon(iconName: string, className: string = '') {
+    let icon = GetIcon(iconName, className)
+
+    if (icon === null) {
+      icon = GetIcon('ExternalLink', className)
+    }
+    return icon;
+  }
+
+  function getLinks(links: { name: string, link: string }[]) {
+    return links.map(item => {
+      const icon = getIcon(item.name, 'w-4 h-4');
+      return {
+        name: item.name,
+        href: item.link,
+        icon: icon,
+      };
+    });
+  }
+
   return (
     <SectionWrapper id={homeSection.id}>
       <header className="max-w-3xl mx-auto text-center" aria-label="Hero section">
@@ -46,17 +68,17 @@ export default function Hero() {
             className="flex justify-center gap-6 text-2xl text-gray-700 mt-6"
           >
             <address className="not-italic flex gap-6">
-              {homeSection.content.links.map(p => (
-                  <Button.Icon
-                    key={p.name}
-                    href={p.link}
-                    tooltipContent={p.name}
-                    iconOnly={GetIcon(p.name)}
-                    size='md'
-                    aria-label={`Open ${p.name} profile`}
-                    className="hover:text-black transition"
-                  />
-              ))}
+              {homeSection.content.links.length > 0 &&
+                (
+                  <nav aria-label="Project Links">
+                    <IconLinkList
+                      items={getLinks(homeSection.content.links)}
+                      iconOnly
+                      size='md'
+                      layout="horizontal"
+                    />
+                  </nav>
+                )}
             </address>
           </section>
 

@@ -1,4 +1,8 @@
 // types/resume.ts
+export type PolymorphicComponentProps<E extends React.ElementType, P> =
+    P & {
+        as?: E;
+    } & Omit<React.ComponentPropsWithoutRef<E>, keyof P>;
 
 export type Contact = {
   phone: string;

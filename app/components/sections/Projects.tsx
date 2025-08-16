@@ -1,57 +1,47 @@
-'use client'
-import { useState } from 'react'
-import data from '@/public/data.json'
-import SectionWrapper from '../common/SectionWrapper'
-import Heading from '../common/Heading'
-import ProjectCard from '../common/ProjectCard'
-import TagFilter from '../common/TagFilter'
-import GetIcon from '../ui/Icons'
-import { IconRecord } from '../ui/BaseComponents/BaseCard'
+'use client';
+
+import data from '@/public/data.json';
+import FilteredGridSection from '@/app/components/ui/molecules/FilterGridSection';
+import ProjectCard from '@/app/components/ui/Cards/ProjectCard';
+import Icon, { IconName, IsIconValid } from '../ui/Atoms/Icon';
 
 export default function Projects() {
-  const projectsData = data.projects;
-  const [activeTag, setActiveTag] = useState<string | null>(null)
+  const projects = data.projects.content;
 
-  const allTags = [...new Set(projectsData.content.flatMap(p => p.items))]
+  function getLinks(links: { name: string, link: string }[]) {
+    return links.map(item => {
+      const iconName = item.name as IconName;
 
-  const filteredProjects = activeTag
-    ? projectsData.content.filter(p => p.items.includes(activeTag))
-    : projectsData.content;
-  
-  const iconMap: IconRecord = {};
-  projectsData.content.forEach(element => {
-    element.links.forEach(item => {
-      let icon = GetIcon(item.name);
-      if (icon === null) {
-        icon = GetIcon('ExternalLink');
-      }
-      if(icon != null)
-        iconMap[item.name] = icon;
+      return {
+        name: item.name,
+        href: item.link,
+        icon: <Icon name={IsIconValid(item.name) ? iconName : 'ExternalLink'} className="w-4 h-4" ariaLabel={item.name} />,
+      };
     });
-  });
-
-  function getCardImage(path: string) {
-    return { path: path, width: 'w-full', height: 'h-50' }
   }
 
+  const getCardImage = (path: string) => ({
+    path,
+    width: 'w-full',
+    height: 'h-50',
+  });
+
   return (
-    <SectionWrapper id={projectsData.id}>
-      <Heading title={projectsData.title} subtitle={projectsData.subTitle} />
-
-      {/* Tag filter */}
-      <TagFilter tags={allTags} activeTag={activeTag} setActiveTag={setActiveTag}></TagFilter>
-
-      {/* Projects Card */}
-      <div className='grid md:grid-cols-4 gap-6'>
-        {filteredProjects.map(project => (
-          <ProjectCard key={project.title}
-            {...project}
-            linkIcons={iconMap}
-            badges={project.items}
-            image={getCardImage(project.image)}
-          ></ProjectCard>
-        ))}
-      </div>
-    </SectionWrapper>
-  )
+    <FilteredGridSection
+      id={data.projects.id}
+      title={data.projects.title}
+      subtitle={data.projects.subTitle}
+      items={projects}
+      getTags={p => p.items || []}
+      renderItem={(project) => (
+        <ProjectCard
+          key={project.title}
+          {...project}
+          links={getLinks(project.links)}
+          badges={project.items}
+          image={getCardImage(project.image)}
+        />
+      )}
+    />
+  );
 }

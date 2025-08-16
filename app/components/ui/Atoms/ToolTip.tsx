@@ -2,12 +2,13 @@
 
 import React, { useState } from 'react';
 import { cn } from '@/app/lib/utils';
+import { Position } from '@/app/lib/variants';
 
 interface TooltipProps {
     children: React.ReactNode;
     content: React.ReactNode;
     title?: React.ReactNode;
-    side?: 'top' | 'bottom' | 'left' | 'right';
+    side?: Position;
     className?: string;
 }
 

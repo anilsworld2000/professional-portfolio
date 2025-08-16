@@ -3,9 +3,9 @@
 import { useState } from 'react'
 import data from '@/public/data.json'
 import SectionWrapper from '@/app/components/common/SectionWrapper'
-import Heading from '@/app/components/common/Heading'
+import Heading from '@/app/components/ui/Atoms/Heading'
 import CertificateCard from '@/app/components/common/CertificationsCard'
-import Button from '@/app/components/ui/BaseComponents/BaseButton'
+import Button from '@/app/components/ui/Atoms/BaseButton'
 
 type Certification = {
   title: string
@@ -29,7 +29,7 @@ export default function Certifications() {
 
   return (
     <SectionWrapper id="certifications">
-      <Heading title="Certifications" subtitle="What I've Earned" />
+      <Heading title="Certifications" subtitle="What I've Earned" align='center' />
 
       {/* Filters */}
       <nav

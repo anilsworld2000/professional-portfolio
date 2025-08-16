@@ -1,7 +1,7 @@
 'use client'
 
 import SectionWrapper from '../common/SectionWrapper'
-import Heading from '../common/Heading'
+import Heading from '../ui/Atoms/Heading'
 import { FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 import { useState } from 'react'
 

@@ -2,13 +2,13 @@
 
 import data from '@/public/data.json'
 import SectionWrapper from '../common/SectionWrapper'
-import Heading from '../common/Heading'
+import Heading from '../ui/Atoms/Heading'
 import ExperienceCard from '../common/ExperienceCard'
 
 export default function ExperienceSection() {
   return (
     <SectionWrapper id="experience" aria-label="Experience Section">
-      <Heading title="Experience" subtitle="My Professional Journey" />
+      <Heading title="Experience" subtitle="My Professional Journey" align='center'/>
 
       <div className="grid gap-6 md:grid-cols-2">
         {data.experience.map((job, index) => (

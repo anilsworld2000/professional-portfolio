@@ -2,7 +2,7 @@
 // Derived Button Variants
 // ------------------------------------
 import { DownloadIcon } from "lucide-react";
-import BaseButton, { ButtonProps } from "./BaseComponents/BaseButton";
+import BaseButton, { ButtonProps } from "./Atoms/BaseButton";
 
 export const PrimaryButton = (props: Partial<ButtonProps>) => (
   <BaseButton variant="primary" {...props} />

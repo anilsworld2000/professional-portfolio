@@ -1,5 +1,5 @@
 import { cn } from "@/app/lib/utils";
-import GetIcon from "../Icons";
+import Icon from "./Icon";
 
 type Variant = 'info' | 'success' | 'warning' | 'danger' | 'neutral';
 type Size = 'sm' | 'md' | 'lg' | 'xl';
@@ -36,7 +36,7 @@ export default function BaseBadge({
   size = 'md',
   iconLeft,
   iconRight,
-  iconOnly,
+  //iconOnly,
   onRemove,
   className,
   'aria-label': ariaLabel,
@@ -68,7 +68,7 @@ export default function BaseBadge({
           aria-label={`Remove ${typeof children === 'string' ? children : 'badge'}`}
         >
             <div className="w-3.5 h-3.5" aria-hidden="true">
-            {GetIcon('X')}
+            <Icon name='X'/>
             </div>
         </button>
       )}

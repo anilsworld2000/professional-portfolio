@@ -1,6 +1,6 @@
 import React from 'react';
 import { cn } from '@/app/lib/utils';
-import Tooltip from '../ToolTip';
+import Tooltip from './ToolTip';
 
 type PolymorphicComponentProps<E extends React.ElementType, P> = P & {
   as?: E;

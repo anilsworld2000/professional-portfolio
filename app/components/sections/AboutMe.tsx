@@ -1,7 +1,7 @@
 'use client'
 
 import SectionWrapper from '../common/SectionWrapper'
-import Heading from '../common/Heading'
+import Heading from '../ui/Atoms/Heading'
 import { motion } from 'framer-motion'
 import data from '@/public/data.json'
 
@@ -10,7 +10,7 @@ export default function AboutMe() {
   return (
     <SectionWrapper id={aboutMeData.id}>
       <article aria-labelledby="about-heading" >
-        <Heading title={aboutMeData.title}/>
+        <Heading title={aboutMeData.title} align='center'/>
         <motion.p
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
