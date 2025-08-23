@@ -46,7 +46,7 @@ export default function Button<E extends React.ElementType = 'button'>({
     className,
     ...props
 }: ButtonProps<E>) {
-    const Component = as || 'button';
+    const Component = (as || 'button') as React.ElementType;
     const isDisabled = disabled || isLoading;
     const effectiveCursor = cursor ?? (isDisabled ? 'not-allowed' : 'pointer');
     //alert(rounded);

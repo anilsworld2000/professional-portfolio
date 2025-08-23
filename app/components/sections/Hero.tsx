@@ -3,31 +3,20 @@
 import { motion } from 'framer-motion'
 import SectionWrapper from '../common/SectionWrapper'
 import data from '@/public/data.json'
-import { GetIcon } from '../ui/Atoms/Icon'
-import IconLinkList from '../ui/molecules/IconLinkList'
-import Button from '../ui/Buttons'
+import Icon, { GetIcon } from '../ui/Atoms/Icon'
+import CustomLink from '../ui/molecules/CustomLink'
+import DownloadButton from '@/app/components/ui/Atoms/DownloadButton'
 
 export default function Hero() {
   const homeSection = data.homeSection;
 
   function getIcon(iconName: string, className: string = '') {
-    let icon = GetIcon(iconName, className)
+    let icon = GetIcon(iconName, className, 24)
 
     if (icon === null) {
       icon = GetIcon('ExternalLink', className)
     }
     return icon;
-  }
-
-  function getLinks(links: { name: string, link: string }[]) {
-    return links.map(item => {
-      const icon = getIcon(item.name, 'w-4 h-4');
-      return {
-        name: item.name,
-        href: item.link,
-        icon: icon,
-      };
-    });
   }
 
   return (
@@ -52,15 +41,17 @@ export default function Hero() {
           }
 
           {/* Download Resume Button */}
-          <Button.Download
-            className='mt-6'
-            tooltipContent='Download Resume'
-            href='/Resume_Anil_Kumar.pdf'
+          <DownloadButton
             aria-label='Download Resume as PDF'
-            size="lg"
-            rounded='full'>
-            Resume
-          </Button.Download>
+            href='/Resume_Anil_Kumar.pdf'
+            variant='primary'
+            size='lg'
+            rounded='full'
+            className='inline-flex focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 mt-6'
+          >
+              <span>Resume</span>
+              <Icon name='Download' className='ml-1'/>
+          </DownloadButton>
 
           {/* Social Links */}
           <section
@@ -70,14 +61,16 @@ export default function Hero() {
             <address className="not-italic flex gap-6">
               {homeSection.content.links.length > 0 &&
                 (
-                  <nav aria-label="Project Links">
-                    <IconLinkList
-                      items={getLinks(homeSection.content.links)}
-                      iconOnly
-                      size='md'
-                      layout="horizontal"
-                    />
-                  </nav>
+                  homeSection.content.links.map(item => (
+                    <CustomLink
+                      key={item.name}
+                      openNewTab={true}
+                      href={item.link}
+                      className='hover:text-blue-500'
+                    >
+                      {getIcon(item.name)}
+                    </CustomLink>
+                  ))
                 )}
             </address>
           </section>
