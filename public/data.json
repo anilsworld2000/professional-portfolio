@@ -23,11 +23,11 @@
                     "link": "#about"
                 },
                 {
-                    "name": "Projects",
+                    "name": "My Work",
                     "link": "#projects"
                 },
                 {
-                    "name": "Contact",
+                    "name": "Let's Connect",
                     "link": "#contact"
                 }
             ]
@@ -36,7 +36,10 @@
     "homeSection": {
         "id": "hero",
         "title": "Home Section",
-        "subTitle": "Experienced Software Developer specializing in scalable, reusable applications.",
+        "subTitle": "Crafting Next-Gen Experiences with React, .NET & AI.",
+        "para": [
+            "I leverage SOLID principles, TDD, and AI-powered tools (ChatGPT, Copilot, Claude) to architect scalable, cloud-native applications that solve real-world challenges."
+        ],
         "content": {
             "name": "Anil Kumar",
             "contact": {
@@ -60,7 +63,7 @@
         "id": "aboutMe",
         "title": "About  Me",
         "subTitle": "",
-        "content": "Experienced Software Developer specializing in scalable, reusable applications with C#, C++, Next.js, TypeScript, and ASP.NET. Proven expertise in integrating Prisma with MongoDB and optimizing performance for high-traffic applications. Adept at collaborating in international environments and delivering innovative solutions within Agile frameworks."
+        "content": "I'm a Fullstack Software Engineer with over four years of experience building cloud-native applications using React, Next.js, ASP.NET Core, C#, TypeScript, Node.js, and MongoDB on Azure. I leverage AI-driven tools like ChatGPT, GitHub Copilot, and Claude to accelerate development, automate testing, and prototype intelligent user experiences. I've led Agile ceremonies—from daily stand-ups to sprint retrospectives—and driven cross-functional initiatives to create reusable component libraries and SOLID-based architectures. I'm passionate about clean code, user-centric design, and embedding AI/ML capabilities to solve real-world challenges. Let's connect and explore how we can build the next generation of intelligent applications together."
     },
     "skills": {
         "id": "skills",
@@ -115,7 +118,7 @@
     },
     "projects": {
         "id": "projects",
-        "title": "Projects",
+        "title": "My Work",
         "subTitle": "Things I've Built",
         "content": [
             {

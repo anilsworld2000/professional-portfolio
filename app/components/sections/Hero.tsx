@@ -1,5 +1,4 @@
-'use client'
-
+'use client';
 import { motion } from 'framer-motion'
 import SectionWrapper from '../common/SectionWrapper'
 import data from '@/public/data.json'
@@ -40,6 +39,12 @@ export default function Hero() {
             </h2>
           }
 
+          {/* Para */}
+          {homeSection.para.length > 0 &&
+            <h1 className="text-lg text-gray-600 font-small">
+              {homeSection.para}
+            </h1>
+          }
           {/* Download Resume Button */}
           <DownloadButton
             aria-label='Download Resume as PDF'
@@ -49,8 +54,8 @@ export default function Hero() {
             rounded='full'
             className='inline-flex focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 mt-6'
           >
-              <span>Resume</span>
-              <Icon name='Download' className='ml-1'/>
+            <span>Resume</span>
+            <Icon name='Download' className='ml-1' />
           </DownloadButton>
 
           {/* Social Links */}
