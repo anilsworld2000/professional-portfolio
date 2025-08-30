@@ -80,6 +80,7 @@
                     "ASP.NET",
                     "Next.js",
                     "Node.js",
+                    "React",
                     "XAML",
                     "HTML",
                     "CSS"
@@ -104,14 +105,27 @@
                     "MVVM",
                     "SOLID Principles",
                     "Agile",
-                    "Design Patterns"
+                    "Design Patterns",
+                    "RESTful API",
+                    "OOPS",
+                    "OOD"
                 ]
             },
             {
-                "name": "Desktop & UI Development",
+                "name": "UI & Desktop",
                 "items": [
                     "WinForms",
-                    "WPF"
+                    "WPF",
+                    "HTML",
+                    "CSS"
+                ]
+            },
+            {
+                "name": "AI & Automation",
+                "items": [
+                    "ChatGPT",
+                    "GitHub Copilot",
+                    "Claude"
                 ]
             }
         ]

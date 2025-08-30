@@ -55,7 +55,7 @@ export default function Hero() {
             className='inline-flex focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 mt-6'
           >
             <span>Resume</span>
-            <Icon name='Download' className='ml-1' />
+            <Icon name='Download' className='ml-1' color='white'/>
           </DownloadButton>
 
           {/* Social Links */}
