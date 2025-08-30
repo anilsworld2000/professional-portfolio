@@ -71,16 +71,22 @@
         "subTitle": "Tools & Technologies I use",
         "content": [
             {
-                "name": "Programming Languages & Frameworks",
+                "name": "Frameworks",
+                "items": [
+                    ".Net",
+                    "ASP.NET",
+                    "Next.js",
+                    "Node.js",
+                    "React"
+                ]
+            },
+            {
+                "name": "Programming Languages",
                 "items": [
                     "C#",
                     "C++",
                     "TypeScript",
                     "JavaScript",
-                    "ASP.NET",
-                    "Next.js",
-                    "Node.js",
-                    "React",
                     "XAML",
                     "HTML",
                     "CSS"
