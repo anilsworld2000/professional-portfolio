@@ -33,7 +33,7 @@ export default function Card<E extends React.ElementType = 'section'>({
                 className
             )}
         >
-            <div className="mt-6">{children}</div>
+            {children}
         </Component>
     );
 }

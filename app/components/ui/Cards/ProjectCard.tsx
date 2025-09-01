@@ -2,9 +2,9 @@
 
 import Image from 'next/image';
 import Heading from '@/app/components/ui/Atoms/Heading';
-import ExpandableCard from '@/app/components/ui/molecules/ExpandableCard';
 import BadgeList from '../molecules/BadgeList';
 import IconLinkList from '../molecules/IconLinkList';
+import Card from '../Atoms/Card';
 
 interface ProjectCardProps {
     title: string;
@@ -20,7 +20,6 @@ interface ProjectCardProps {
         href: string;
         icon?: React.ReactNode;
     }[];
-    variant?: 'light' | 'dark' | 'primary' | 'neutral';
 }
 
 export default function ProjectCard({
@@ -30,12 +29,11 @@ export default function ProjectCard({
     image,
     badges = [],
     links = [],
-    variant = 'light',
 }: ProjectCardProps) {
-    return (
-        <ExpandableCard variant={variant} className="overflow-hidden">
-            <article className="flex flex-col gap-3" aria-labelledby={`project-${title}`}>
 
+    return (
+        <Card className="overflow-hidden hover:shadow-2xl transition" rounded='2xl'>
+            <article className="flex flex-col gap-3" aria-labelledby={`project-${title}`}>
                 {/* Image + Title Row */}
                 <div className="flex items-center gap-4">
                     {image && (
@@ -88,6 +86,6 @@ export default function ProjectCard({
                     </nav>
                 )}
             </article>
-        </ExpandableCard>
+        </Card>
     );
 }

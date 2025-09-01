@@ -2,21 +2,12 @@
 import { motion } from 'framer-motion'
 import SectionWrapper from '../common/SectionWrapper'
 import data from '@/public/data.json'
-import Icon, { GetIcon } from '../ui/Atoms/Icon'
-import CustomLink from '../ui/molecules/CustomLink'
+import Icon from '../ui/Atoms/Icon'
 import DownloadButton from '@/app/components/ui/Atoms/DownloadButton'
+import SocialLinks from '../common/SocialLinks';
 
 export default function Hero() {
   const homeSection = data.homeSection;
-
-  function getIcon(iconName: string, className: string = '') {
-    let icon = GetIcon(iconName, className, 24)
-
-    if (icon === null) {
-      icon = GetIcon('ExternalLink', className)
-    }
-    return icon;
-  }
 
   return (
     <SectionWrapper id={homeSection.id}>
@@ -59,27 +50,7 @@ export default function Hero() {
           </DownloadButton>
 
           {/* Social Links */}
-          <section
-            aria-label="Social media links"
-            className="flex justify-center gap-6 text-2xl text-gray-700 mt-6"
-          >
-            <address className="not-italic flex gap-6">
-              {homeSection.content.links.length > 0 &&
-                (
-                  homeSection.content.links.map(item => (
-                    <CustomLink
-                      key={item.name}
-                      openNewTab={true}
-                      href={item.link}
-                      className='hover:text-blue-500'
-                    >
-                      {getIcon(item.name)}
-                    </CustomLink>
-                  ))
-                )}
-            </address>
-          </section>
-
+          <SocialLinks/>
         </motion.div>
       </header>
     </SectionWrapper>

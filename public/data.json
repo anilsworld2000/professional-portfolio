@@ -63,7 +63,7 @@
         "id": "aboutMe",
         "title": "About  Me",
         "subTitle": "",
-        "content": "I'm a Fullstack Software Engineer with over four years of experience building cloud-native applications using React, Next.js, ASP.NET Core, C#, TypeScript, Node.js, and MongoDB on Azure. I leverage AI-driven tools like ChatGPT, GitHub Copilot, and Claude to accelerate development, automate testing, and prototype intelligent user experiences. I've led Agile ceremonies—from daily stand-ups to sprint retrospectives—and driven cross-functional initiatives to create reusable component libraries and SOLID-based architectures. I'm passionate about clean code, user-centric design, and embedding AI/ML capabilities to solve real-world challenges. Let's connect and explore how we can build the next generation of intelligent applications together."
+        "content": "I'm a Fullstack Software Engineer with over five years of experience building cloud-native applications using React, Next.js, ASP.NET Core, C#, TypeScript, Node.js, and MongoDB on Azure. I leverage AI-driven tools like ChatGPT, GitHub Copilot, and Claude to accelerate development, automate testing, and prototype intelligent user experiences. I've led Agile ceremonies—from daily stand-ups to sprint retrospectives and driven cross-functional initiatives to create reusable component libraries and SOLID-based architectures. I'm passionate about clean code, user-centric design, and embedding AI/ML capabilities to solve real-world challenges. Let's connect and explore how we can build the next generation of intelligent applications together."
     },
     "skills": {
         "id": "skills",
@@ -73,7 +73,7 @@
             {
                 "name": "Frameworks",
                 "items": [
-                    ".Net",
+                    ".NET",
                     "ASP.NET",
                     "Next.js",
                     "Node.js",
@@ -152,16 +152,7 @@
                     ".NET",
                     "XML"
                 ],
-                "links": [
-                    {
-                        "name": "GitHub",
-                        "link": ""
-                    },
-                    {
-                        "name": "Demo",
-                        "link": ""
-                    }
-                ]
+                "links": []
             },
             {
                 "title": "CAD Project Data Management Plugin",
@@ -175,16 +166,7 @@
                     "XML",
                     "MVC"
                 ],
-                "links": [
-                    {
-                        "name": "GitHub",
-                        "link": ""
-                    },
-                    {
-                        "name": "Demo",
-                        "link": ""
-                    }
-                ]
+                "links": []
             },
             {
                 "title": "Personal Finance Portfolio Management App",
@@ -198,16 +180,7 @@
                     "PostgreSQL",
                     "Prisma"
                 ],
-                "links": [
-                    {
-                        "name": "GitHub",
-                        "link": ""
-                    },
-                    {
-                        "name": "Demo",
-                        "link": ""
-                    }
-                ]
+                "links": []
             },
             {
                 "title": "Earth Resource Estimation App",
@@ -219,16 +192,7 @@
                     "JavaScript",
                     "TypeScript"
                 ],
-                "links": [
-                    {
-                        "name": "GitHub",
-                        "link": ""
-                    },
-                    {
-                        "name": "Demo",
-                        "link": ""
-                    }
-                ]
+                "links": []
             }
         ]
     },
@@ -236,29 +200,26 @@
         {
             "title": "Software Developer",
             "company": "Dassault Systemes and Solutions Pvt. Ltd",
-            "location": "Pune",
-            "duration": "July 2023 – Present",
-            "responsibilities": [
-                "Delivering the functions for release",
-                "Led Agile sprint planning to improve team efficiency",
-                "Optimized data export feature, reducing processing time by 30%",
-                "Integrated C++ and JavaScript components for interoperability",
-                "Architected scalable solutions for modularity and maintainability"
-            ],
+            "location": "Pune, India",
+            "duration": "July 2023 to Present",
+            "responsibilities": [],
             "image": "/logos/dassault.svg"
         },
         {
             "title": "Associate Software Developer",
             "company": "Prototech Solutions and Services Pvt. Ltd",
-            "location": "Pune",
-            "duration": "Dec 2021 – July 2023",
-            "responsibilities": [
-                "Developed desktop applications using WinForms and WPF",
-                "Created flowcharts, layouts, and documentation",
-                "Provided maintenance and enhancements in existing systems",
-                "TDD-driven development and ongoing support"
-            ],
-            "image": "/logos/prototech.svg"
+            "location": "Pune, India",
+            "duration": "Dec 2021 to July 2023",
+            "responsibilities": [],
+            "image": "/logos/prototech.png"
+        },
+        {
+            "title": "Senior Engineer",
+            "company": "Tata Technologies Ltd",
+            "location": "Pune, India",
+            "duration": "May 2020 to Jun 2021",
+            "responsibilities": [],
+            "image": "/logos/tataTech.svg"
         }
     ],
     "education": [
@@ -271,39 +232,5 @@
             "institution": "PDM Polytechnic"
         }
     ],
-    "languages_known": {
-        "English": "Advanced",
-        "Hindi": "Native"
-    },
-    "certifications": [
-        {
-            "title": "Scrum Master Certified",
-            "issuer": "Scrum Alliance",
-            "date": "2024-06-01",
-            "type": "Agile",
-            "link": "https://example.com/scrum-cert",
-            "badge": "scrum-alliance.svg"
-        },
-        {
-            "title": "Azure Fundamentals (AZ-900)",
-            "issuer": "Microsoft",
-            "date": "2023-11-15",
-            "type": "Cloud",
-            "link": "https://example.com/azure-cert",
-            "badge": "microsoft.svg"
-        },
-        {
-            "title": "Agile with Atlassian Jira",
-            "issuer": "Coursera",
-            "date": "2023-05-01",
-            "type": "Agile",
-            "link": "https://example.com/jira-cert",
-            "badge": "coursera.svg"
-        }
-    ],
-    "achievements": [
-        "Optimized performance by 4x",
-        "Best Employee of the Quarter",
-        "Built cross-platform simulation app improving workflow automation"
-    ]
+    "certifications": []
 }

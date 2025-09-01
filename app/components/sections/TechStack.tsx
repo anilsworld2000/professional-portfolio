@@ -18,7 +18,7 @@ export default function TechStack() {
   return (
     <SectionWrapper id={data.skills.id}>
       <Heading title={data.skills.title} subtitle={data.skills.subTitle} align='center' />
-      <div className="grid gap-10 md:grid-cols-4 lg:grid-cols-3 ">
+      <div className="grid gap-10 md:grid-cols-4 lg:grid-cols-3">
         {skills.map((group) => (
           <Card key={group.name} as='section' aria-label={group.name} rounded='2xl'>
             <h3 className="text-xl font-semibold text-gray-800 mb-4">{group.name}</h3>
