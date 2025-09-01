@@ -12,6 +12,7 @@ import { TbDatabase } from 'react-icons/tb';
 import { DownloadIcon, Menu, X } from 'lucide-react';
 import type { ComponentProps, JSX } from 'react';
 import { FcBusinessman } from 'react-icons/fc';
+import { VscAzure } from 'react-icons/vsc';
 
 export type IconName =
   | 'Businessman'
@@ -24,7 +25,9 @@ export type IconName =
   | 'C++'
   | 'TypeScript'
   | 'JavaScript'
+  | '.NET'
   | 'ASP.NET'
+  | 'Azure'
   | 'Next.js'
   | 'Node.js'
   | 'HTML'
@@ -57,7 +60,9 @@ const iconColors: Record<IconName, string> = {
   'C++': '#00599C',
   TypeScript: '#007ACC',
   JavaScript: '#F7DF1E',
+  '.NET': '#512BD4',
   'ASP.NET': '#512BD4',
+  'Azure': '#512BD4',
   'Next.js': '#000000',
   'Node.js': '#339933',
   HTML: '#E34F26',
@@ -147,7 +152,9 @@ export const iconMap: Record<IconName, (className?: string, iconSize?: number, i
   'C++': (className, iconSize, iconColor) => <SiCplusplus className={className} size={iconSize} color={iconColor}  />,
   'TypeScript': (className, iconSize, iconColor) => <SiTypescript className={className} size={iconSize} color={iconColor}  />,
   'JavaScript': (className, iconSize, iconColor) => <SiJavascript className={className} size={iconSize} color={iconColor}  />,
-  'ASP.NET': (className, iconSize, iconColor) => <SiDotnet className={className} size={iconSize} color={iconColor}  />,
+  '.NET': (className, iconSize, iconColor) => <SiDotnet className={className} size={iconSize} color={iconColor} />,
+  'ASP.NET': (className, iconSize, iconColor) => <SiDotnet className={className} size={iconSize} color={iconColor} />,
+  'Azure': (className, iconSize, iconColor) => <VscAzure className={className} size={iconSize} color={iconColor}  />,
   'Next.js': (className, iconSize, iconColor) => <SiNextdotjs className={className} size={iconSize} color={iconColor}  />,
   'Node.js': (className, iconSize, iconColor) => <FaNodeJs className={className} size={iconSize} color={iconColor}  />,
   'HTML': (className, iconSize, iconColor) => <FaHtml5 className={className} size={iconSize} color={iconColor}  />,

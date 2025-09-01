@@ -3,43 +3,44 @@
 import SectionWrapper from '../common/SectionWrapper'
 import Heading from '../ui/Atoms/Heading'
 import { FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
-import { useState } from 'react'
+import data from '@/public/data.json'
+import CustomLink from '../ui/molecules/CustomLink'
 
 export default function Contact() {
 
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  //const [formData, setFormData] = useState({ name: '', email: '', message: '' })
+  //const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
-  }
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  //   setFormData({ ...formData, [e.target.name]: e.target.value })
+  // }
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setStatus('loading')
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault()
+  //   setStatus('loading')
 
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      })
+  //   try {
+  //     const res = await fetch('/api/contact', {
+  //       method: 'POST',
+  //       headers: { 'Content-Type': 'application/json' },
+  //       body: JSON.stringify(formData),
+  //     })
 
-      const data = await res.json()
-      if (data.success) {
-        setStatus('success')
-        setFormData({ name: '', email: '', message: '' })
-      } else {
-        setStatus('error')
-      }
-    } catch {
-      setStatus('error')
-    }
-  }
+  //     const data = await res.json()
+  //     if (data.success) {
+  //       setStatus('success')
+  //       setFormData({ name: '', email: '', message: '' })
+  //     } else {
+  //       setStatus('error')
+  //     }
+  //   } catch {
+  //     setStatus('error')
+  //   }
+  // }
 
   return (
     <SectionWrapper id="contact">
-      <Heading title="Contact" subtitle="Let&#39;s Connect" />
+      <Heading title="Contact" subtitle="Let&#39;s Connect" align='center' />
 
       <section
         aria-labelledby="contact-heading"
@@ -52,21 +53,19 @@ export default function Contact() {
         <address className="not-italic flex flex-col items-center gap-4 text-sm text-gray-700">
           <div className="flex items-center gap-2">
             <FaEnvelope className="text-blue-600" />
-            <a
-              href="mailto:your.email@example.com"
+            <CustomLink
               className="hover:underline"
-            >
-              your.email@example.com
-            </a>
+              href={data.homeSection.content.contact.email}>{data.homeSection.content.contact.email}
+            </CustomLink>
           </div>
           <div className="flex items-center gap-2">
             <FaMapMarkerAlt className="text-green-600" />
-            <span>Bangalore, India</span>
+            <span>{data.homeSection.content.contact.location}</span>
           </div>
         </address>
 
         {/* Optional form (semantically correct) */}
-        <form
+        {/* <form
           className="mt-8 space-y-4 text-left"
           aria-label="Contact form"
           onSubmit={handleSubmit}
@@ -121,7 +120,7 @@ export default function Contact() {
           {status === 'error' && (
             <p className="text-red-600 mt-2">Something went wrong. Try again.</p>
           )}
-        </form>
+        </form> */}
       </section>
     </SectionWrapper>
   )

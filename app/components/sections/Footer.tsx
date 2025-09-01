@@ -1,10 +1,14 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { FaArrowUp, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaArrowUp } from 'react-icons/fa'
+import SocialLinks from '../common/SocialLinks'
+import data from '@/public/data.json'
+import Link from 'next/link';
 
 export default function Footer() {
   const [showScroll, setShowScroll] = useState(false)
+  const links = data.topNavBar.rightSide.links;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,46 +28,20 @@ export default function Footer() {
           </p>
         </section>
 
-        <section aria-label="Social media links" className="flex gap-4 text-xl mt-2">
-          <address className="not-italic flex gap-4">
-            <a
-              href="https://github.com/anilkumardeveloper"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              className="hover:text-black transition"
-            >
-              <FaGithub />
-            </a>
-            <a
-              href="https://linkedin.com/in/anilkumardeveloper"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="hover:text-blue-700 transition"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              href="https://twitter.com/anilkumarcodes"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-              className="hover:text-sky-500 transition"
-            >
-              <FaTwitter />
-            </a>
-          </address>
-        </section>
+        {/* Social Links */}
+        <SocialLinks />
 
-        <nav aria-label="Footer navigation" className="mt-6 mb-6">
-          <ul className="flex flex-wrap justify-center gap-4 text-sm">
-            <li><a href="#about" className="hover:underline">About</a></li>
-            <li><a href="#projects" className="hover:underline">Projects</a></li>
-            <li><a href="#contact" className="hover:underline">Contact</a></li>
-            <li><a href="#" lang="en" className="hover:underline">EN</a></li>
-            <li><a href="#" lang="hi" className="hover:underline">हिन्दी</a></li>
-          </ul>
+        {/* Navigation */}
+        <nav aria-label="Footer navigation" className="mt-6 mb-6 lex flex-wrap justify-center gap-4 text-sm">
+            {links.map(item => (
+              <Link
+                key={item.name}
+                href={item.link}
+                className='hover:underline p-2'
+              >
+                {item.name}
+              </Link>
+            ))}
         </nav>
 
         <section aria-label="Copyright">

@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Card from '../Atoms/Card'
 
 type ExperienceCardProps = {
   title: string
@@ -19,12 +20,14 @@ export default function ExperienceCard({
   responsibilities,
 }: ExperienceCardProps) {
   return (
-    <article
-      role="region"
+    <Card
+      as='article'
+      role="region"      
       aria-labelledby={`experience-title-${title}`}
-      className="bg-white shadow-md rounded-xl overflow-hidden border hover:shadow-lg transition"
+      rounded='2xl'
+      className="overflow-hidden border hover:shadow-2xl transition"
     >
-      <header className="p-4 flex items-center gap-4" aria-label="Company logo and job info">
+      <header className="p-1 flex items-center gap-4" aria-label="Company logo and job info">
         {image ? (
           <Image
             src={image}
@@ -42,7 +45,7 @@ export default function ExperienceCard({
             {fallbackText}
           </div>
         )}
-        <div>
+        <div className='text-left'>
           <h3 id={`experience-title-${title}`} className="text-md font-semibold text-gray-800">
             {title}
           </h3>
@@ -52,8 +55,8 @@ export default function ExperienceCard({
         </div>
       </header>
 
-      <section className="px-4 pb-4" aria-label="Experience Details">
-        <p className="text-xs text-gray-500 mb-2" aria-label="Duration and Location">
+      <section className="px-4 pb-2" aria-label="Experience Details">
+        <p className="text-xs text-gray-500 mb-2 text-center" aria-label="Duration and Location">
           {metadata}
         </p>
         <ul
@@ -65,6 +68,6 @@ export default function ExperienceCard({
           ))}
         </ul>
       </section>
-    </article>
+    </Card>
   )
 }
