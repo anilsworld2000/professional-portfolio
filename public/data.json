@@ -36,9 +36,10 @@
     "homeSection": {
         "id": "hero",
         "title": "Home Section",
-        "subTitle": "Crafting Next-Gen Experiences with React, .NET & AI.",
+        "subTitle": "Backend Engineer | .NET Core | Scalable Systems | System Design",
         "para": [
-            "I leverage SOLID principles, TDD, and AI-powered tools (ChatGPT, Copilot, Claude) to architect scalable, cloud-native applications that solve real-world challenges."
+            "I design and build secure, high-performance backend systems using .NET Core, with a strong focus on authentication, authorization, and scalable architecture.",
+            "\nSpecialized in JWT-based authentication, RBAC, caching strategies, and building production-ready APIs."
         ],
         "content": {
             "name": "Anil Kumar",
@@ -61,77 +62,48 @@
     },
     "aboutMe": {
         "id": "aboutMe",
-        "title": "About  Me",
+        "title": "About Me",
         "subTitle": "",
-        "content": "I'm a Fullstack Software Engineer with over five years of experience building cloud-native applications using React, Next.js, ASP.NET Core, C#, TypeScript, Node.js, and MongoDB on Azure. I leverage AI-driven tools like ChatGPT, GitHub Copilot, and Claude to accelerate development, automate testing, and prototype intelligent user experiences. I've led Agile ceremonies—from daily stand-ups to sprint retrospectives and driven cross-functional initiatives to create reusable component libraries and SOLID-based architectures. I'm passionate about clean code, user-centric design, and embedding AI/ML capabilities to solve real-world challenges. Let's connect and explore how we can build the next generation of intelligent applications together."
+        "content": "Backend Engineer with 5+ years of experience designing and building scalable, secure backend systems using .NET Core and TypeScript. I specialize in developing production-grade APIs, implementing robust authentication and authorization systems using JWT and refresh tokens, and designing role-based access control (RBAC) systems.\n\nMy focus is on writing clean, maintainable code and building architectures that scale. I have hands-on experience in applying caching strategies, rate limiting, and asynchronous processing to improve performance and reliability.\n\nCurrently, I am building a personal finance platform with a microservice-ready architecture, focusing on modular backend design, goal-based investment tracking, and data-driven insights.\n\nI enjoy solving complex backend challenges and designing systems that are secure, scalable, and production-ready."
     },
     "skills": {
         "id": "skills",
         "title": "Tech Stack",
-        "subTitle": "Tools & Technologies I use",
+        "subTitle": "Backend Engineering & System Design",
         "content": [
             {
-                "name": "Frameworks",
-                "items": [
-                    ".NET",
-                    "ASP.NET",
-                    "Next.js",
-                    "Node.js",
-                    "React"
-                ]
-            },
-            {
-                "name": "Programming Languages",
+                "name": "Backend & APIs",
                 "items": [
                     "C#",
-                    "C++",
-                    "TypeScript",
-                    "JavaScript",
-                    "XAML",
-                    "HTML",
-                    "CSS"
+                    ".NET Core",
+                    "ASP.NET Core",
+                    "REST API Development"
                 ]
             },
             {
-                "name": "Database & Cloud Technologies",
+                "name": "System Design & Security",
                 "items": [
-                    "SQLite",
-                    "SQL",
-                    "Azure",
-                    "Prisma",
-                    "MongoDB"
+                    "JWT + Refresh Token architecture",
+                    "Role-based access control (RBAC)",
+                    "Caching strategies",
+                    "Rate limiting & API security"
                 ]
             },
             {
-                "name": "Development Practices & Tools",
+                "name": "Databases",
+                "items": [
+                    "SQL Server",
+                    "MongoDB",
+                    "Prisma ORM"
+                ]
+            },
+            {
+                "name": "Tools & Practices",
                 "items": [
                     "Git",
-                    "TDD",
-                    "MVC",
-                    "MVVM",
+                    "Docker",
                     "SOLID Principles",
-                    "Agile",
-                    "Design Patterns",
-                    "RESTful API",
-                    "OOPS",
-                    "OOD"
-                ]
-            },
-            {
-                "name": "UI & Desktop",
-                "items": [
-                    "WinForms",
-                    "WPF",
-                    "HTML",
-                    "CSS"
-                ]
-            },
-            {
-                "name": "AI & Automation",
-                "items": [
-                    "ChatGPT",
-                    "GitHub Copilot",
-                    "Claude"
+                    "Design Patterns"
                 ]
             }
         ]
@@ -142,36 +114,9 @@
         "subTitle": "Things I've Built",
         "content": [
             {
-                "title": "CAD Model Simulation Plugin",
-                "subTitle": "",
-                "description": "Developed a plugin to simulate CAD models for engineering analysis.",
-                "image": "/images/projects/CAD_PlugIn.svg",
-                "items": [
-                    "C#",
-                    "WinForms",
-                    ".NET",
-                    "XML"
-                ],
-                "links": []
-            },
-            {
-                "title": "CAD Project Data Management Plugin",
-                "subTitle": "",
-                "description": "Developed a plugin to manage CAD models data.",
-                "image": "/images/projects/CAD_PlugIn.svg",
-                "items": [
-                    "C#",
-                    "WinForms",
-                    ".NET",
-                    "XML",
-                    "MVC"
-                ],
-                "links": []
-            },
-            {
-                "title": "Personal Finance Portfolio Management App",
-                "subTitle": "",
-                "description": "",
+                "title": "Personal Finance Portfolio Management System",
+                "subTitle": "Scalable goal-based investment and asset tracking platform",
+                "description": "Designed and developing a full-stack personal finance platform to track assets, liabilities, and financial goals with a focus on long-term wealth planning.\n\nBuilt with a microservice-ready backend architecture, the system supports goal-based investment planning, real-time data processing, and modular service design.\n\nImplemented secure authentication using JWT with refresh tokens, role-based access control (RBAC), and scalable API design. Focused on performance optimization using caching and efficient data handling.",
                 "image": "/images/projects/personal-finance-app.svg",
                 "items": [
                     "Next.js",
@@ -183,9 +128,36 @@
                 "links": []
             },
             {
-                "title": "Earth Resource Estimation App",
-                "subTitle": "",
-                "description": "A native desktop app to estimate resource quantities using geospatial data.",
+                "title": "CAD Model Simulation Plugin",
+                "subTitle": "High-performance engineering simulation tool",
+                "description": "Developed a CAD plugin for simulating engineering models to assist in analysis and decision-making.\n\nFocused on performance optimization and handling complex geometric data. Designed efficient data processing workflows and integrated simulation logic within the CAD environment.\n\nImproved usability and performance for engineers working with large-scale models.",
+                "image": "/images/projects/CAD_PlugIn.svg",
+                "items": [
+                    "C#",
+                    ".NET",
+                    "WinForms",
+                    "XML"
+                ],
+                "links": []
+            },
+            {
+                "title": "CAD Data Management Plugin",
+                "subTitle": "Structured data management for engineering models",
+                "description": "Built a plugin to manage and organize CAD model data efficiently.\n\nImplemented structured data handling using MVC architecture and improved data accessibility for engineering workflows. Focused on maintainability and modular design for long-term scalability.",
+                "image": "/images/projects/CAD_PlugIn.svg",
+                "items": [
+                    "C#",
+                    ".NET",
+                    "WinForms",
+                    "MVC",
+                    "XML"
+                ],
+                "links": []
+            },
+            {
+                "title": "Earth Resource Estimation Application",
+                "subTitle": "Geospatial-based resource calculation system",
+                "description": "Developed a desktop application to estimate earth resource quantities using geospatial data.\n\nWorked on data processing, calculation logic, and system performance. Focused on accuracy, efficiency, and handling large datasets.",
                 "image": "/images/projects/next.svg",
                 "items": [
                     "C++",
